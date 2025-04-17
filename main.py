@@ -8,12 +8,13 @@ from routes.StateRoutes import router as state_router
 from routes.CityRoutes import router as city_router
 from routes.AreaRoutes import router as area_router
 from routes.ProductRoutes import router as product_router
+from routes.AdvertisementRoutes import router as ad_router
 
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -27,6 +28,7 @@ app.include_router(state_router)
 app.include_router(city_router)
 app.include_router(area_router)
 app.include_router(product_router)
+app.include_router(ad_router)
 
 
 

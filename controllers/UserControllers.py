@@ -7,7 +7,7 @@ import bcrypt
 
 async def addUser(user: User):
     # if not isinstance(user.role_id, str) or len(user.role_id) != 24:
-    #     raise HTTPException(status_code=400, detail="Invalid role_id format.")
+    #     raise HTTPException(status_codfroe=400, detail="Invalid role_id format.")
 
     user.role_id = ObjectId(user.role_id)
     print("after type cast",user.role_id)
